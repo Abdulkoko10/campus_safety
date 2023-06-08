@@ -92,7 +92,7 @@ function App() {
             return null;
           });  
           
-          const response = await fetch('http://localhost:8080/api/v1/users', {
+          const response = await fetch('https://campus-safety.onrender.com/api/v1/users', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -138,7 +138,7 @@ function App() {
             return null;
           });
           
-          const response = await axios.post('http://localhost:8080/api/v1/users/login', {
+          const response = await axios.post('https://campus-safety.onrender.com/api/v1/users/login', {
             email,
             password,
             deviceToken,
@@ -172,7 +172,7 @@ function App() {
           });
 
 
-        const response = await axios.post('http://localhost:8080/api/v1/users/register', {
+        const response = await axios.post('https://campus-safety.onrender.com/api/v1/users/register', {
           name,
           email,
           password,
@@ -230,7 +230,7 @@ function App() {
   return (
       <RefineSnackbarProvider>
         <Refine
-          dataProvider={dataProvider("http://localhost:8080/api/v1")}
+          dataProvider={dataProvider("https://campus-safety.onrender.com/api/v1")}
           notificationProvider={notificationProvider}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}
