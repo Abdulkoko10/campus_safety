@@ -32,7 +32,7 @@ app.use('/api/v1/reports', reportRouter);
 
 const startServer = async () => {
   try {
-    connectDB(process.env.MONGODB_URl);
+    connectDB(process.env.MONGODB_URL);
 
     app.listen(8080, () => 
     console.log(
